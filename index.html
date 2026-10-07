@@ -922,6 +922,12 @@
 
           state.width = cssWidth;
           state.height = cssHeight;
+
+          if(!blocks.length || blocks[0].w <= 1){
+            blocks = [makeBase()];
+            newMoving();
+          }
+
           draw();
         }
 
